@@ -8,23 +8,29 @@ interests:
   - Computational Linguistics
   - Information Retrieval
 social:
+  - link: https://github.com/BriceonWiley
+    icon: github
+    icon_pack: fab
   - link: https://orcid.org/0000-0003-2297-2006
     icon_pack: ai
     icon: orcid
+  - link: https://www.linkedin.com/in/briceon-wiley-62075ab5/
+    icon: linkedin
+    icon_pack: fab
 organizations:
-  - name: Stanford University
-    url: ""
+  - name: Baylor University
+    url: https://business.baylor.edu/directory/?id=Briceon_Wiley
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: PhD in Statistical Sciences
+      institution: Baylor University
+      year: 2020
+    - course: MS in Statistical Sciences
+      institution: Baylor University
+      year: 2017
+    - course: BBA in Business, Finance, French, and Mathematics
+      institution: Baylor University
+      year: 2016
 email: ""
 superuser: true
 authors:
