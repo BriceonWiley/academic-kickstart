@@ -1,10 +1,11 @@
 ---
 title: Briceön Wiley
-role: Graduate Research Assistant and Teacher of Record
+role: Postdoctoral Research Fellow
 bio: ""
 interests:
   - Integrated-Likelihood-Ratio Methods
   - Misclassification
+  - Confidence Interval Methods
   - High Dimensional Data Analysis
   - Dimension Reduction
 social:
@@ -18,8 +19,8 @@ social:
     icon: linkedin
     icon_pack: fab
 organizations:
-  - name: Baylor University
-    url: https://business.baylor.edu/directory/?id=Briceon_Wiley
+  - name: Rice University
+    url: https://statistics.rice.edu
 education:
   courses:
     - course: PhD in Statistical Sciences
@@ -38,6 +39,8 @@ authors:
 user_groups:
   - ""
 ---
-Briceön Wiley is a PhD candidate in statisitcal sciences at Baylor University in Waco, Texas. His research interests include integrated-likelihood-ratio methods, misclassification, and high dimensional data analysis.
+I am a Postdoctoral Research Fellow in the Interinstitutional Graduate Program in Biostatistics for Cancer Research between Rice University and MD Anderson Cancer Center. I attended Baylor University for both my graduate and undergraduate education, earning my Ph.D. in Statistical Science and a BBA from their Baylor Business Fellows program with concentrations in Finance, French, and Mathematics.
 
-Passionate about teaching in addition to research, his experience includes courses in algebra, statistics, and business analytics.
+My doctoral research focused on parameter estimation when data experience misclassification, both under- and over-counting, through the construction of confidence intervals based on integrated-likelihood-ratio methodology. Currently, I have a paper under review at *Statistica Neerlandica* and am preparing others.
+
+I also have a passion for teaching, having taught at Baylor University and McLennan Community College during my time in graduate school. Courses that I have taught include: Elementary and Intermediate Algebra, Elementary Statistics, Business Data Analysis, and Introduction to Business Analytics.
