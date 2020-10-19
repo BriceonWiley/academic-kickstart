@@ -41,6 +41,6 @@ user_groups:
 ---
 I am a Postdoctoral Research Fellow in the Interinstitutional Graduate Program in Biostatistics for Cancer Research between Rice University and MD Anderson Cancer Center. I attended Baylor University for both my graduate and undergraduate education, earning my Ph.D. in Statistical Science and a B.B.A. from their Baylor Business Fellows program with concentrations in Finance, French, and Mathematics.
 
-My doctoral research focused on parameter estimation when data experience misclassification, both under- and over-counting, through the construction of confidence intervals based on integrated-likelihood-ratio methodology. Currently, I have a papers under review at *Statistica Neerlandica* and *Information Technology and People*, with others in preparation.
+My doctoral research focused on parameter estimation when data experience misclassification, both under- and over-counting, through the construction of confidence intervals based on integrated-likelihood-ratio methodology. Currently, I have papers under review at *Statistica Neerlandica* and *Information Technology and People*, with others in preparation.
 
 I also have a passion for teaching, having taught at Baylor University and McLennan Community College during my time in graduate school. Courses that I have taught include: Elementary and Intermediate Algebra, Elementary Statistics, Business Data Analysis, and Introduction to Business Analytics.
