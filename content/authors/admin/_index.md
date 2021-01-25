@@ -39,7 +39,7 @@ authors:
 user_groups:
   - ""
 ---
-I am a Postdoctoral Research Fellow in the Interinstitutional Graduate Program in Biostatistics for Cancer Research between Rice University and MD Anderson Cancer Center. I attended Baylor University for both my graduate and undergraduate education, earning my Ph.D. in Statistical Science under James Stamey and Dean Young, and a B.B.A. from their Baylor Business Fellows program with concentrations in Finance, French, and Mathematics.
+I am a Postdoctoral Research Fellow in the Interinstitutional Graduate Program in Biostatistics for Cancer Research between Rice University and MD Anderson Cancer Center under [Christine B. Peterson](https://odin.mdacc.tmc.edu/~cbpeterson/). I attended Baylor University for both my graduate and undergraduate education, earning my Ph.D. in Statistical Science under [James D. Stamey](https://www.baylor.edu/statistics/index.php?id=941846) and [Dean M. Young](https://www.baylor.edu/statistics/index.php?id=941857), and a B.B.A. from their Baylor Business Fellows program with concentrations in Finance, French, and Mathematics.
 
 My doctoral research focused on parameter estimation when data experience misclassification, both under- and over-counting, through the construction of confidence intervals based on integrated-likelihood-ratio methodology. I currently have one paper in production at *Statistica Neerlandica* and another under under review at *Information Technology and People*, with others in preparation.
 
