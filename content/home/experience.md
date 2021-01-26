@@ -37,8 +37,8 @@ experience:
   company = 'Baylor Collaborative on Hunger and Poverty'
   company_url = 'https://www.baylor.edu/hungerandpoverty/'
   location = 'Texas'
-  date_start = '2020-04'
-  date_end = '2020-08'
+  date_start = '2020-04-01'
+  date_end = '2020-08-01'
   description = 'Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard.'
 
 # [[experience]]
