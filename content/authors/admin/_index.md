@@ -45,4 +45,6 @@ My doctoral research focused on parameter estimation when data experience miscla
 
 I also enjoy teaching, having taught at Baylor University and McLennan Community College during my time in graduate school. Courses that I have taught include: Elementary and Intermediate Algebra, Elementary Statistics, Business Data Analysis, and Introduction to Business Analytics.
 
-<img src="http://ghchart.rshah.org/BriceonWiley" alt="Name Your GitHub chart">
+<img src="https://ghchart.rshah.org/964b00/BriceonWiley" alt="Name Your GitHub chart">
+
+Check out my activity.
