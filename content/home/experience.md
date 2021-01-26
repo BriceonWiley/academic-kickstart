@@ -1,7 +1,7 @@
 +++
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
-headless = false  # This file represents a page section.
+headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
@@ -32,14 +32,14 @@ date_format = "Jan 2006"
 #   * Programming
 #   """
 #
-[[experience]]
-  title = "Data Scientist"
-  company = "Baylor Collaborative on Hunger and Poverty"
-  company_url = "https://www.baylor.edu/hungerandpoverty/"
-  location = "Texas"
-  date_start = "Apr 2020"
-  date_end = "Aug 2020"
-  description = "Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard."
+experience:
+- title = 'Data Scientist'
+  company = 'Baylor Collaborative on Hunger and Poverty'
+  company_url = 'https://www.baylor.edu/hungerandpoverty/'
+  location = 'Texas'
+  date_start = '2020-04'
+  date_end = '2020-08'
+  description = 'Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard.'
 
 # [[experience]]
 #   title = "Teacher of Record"
