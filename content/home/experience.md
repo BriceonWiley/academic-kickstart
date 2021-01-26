@@ -20,7 +20,7 @@ date_format = "Jan 2006"
 [[experience]]
   title = "Postdoctoral Research Fellow"
   company = "Rice University \& MD Anderson Cancer Center"
-  company_url = "https://statistics.rice.edu/academics/graduate/interinstitutional-biostatistics-graduate"
+  # company_url = "https://statistics.rice.edu/academics/graduate/interinstitutional-biostatistics-graduate"
   location = "Houston, TX"
   date_start = "2020-08"
   date_end = ""
@@ -35,25 +35,25 @@ date_format = "Jan 2006"
 [[experience]]
   title = 'Data Scientist'
   company = 'Baylor Collaborative on Hunger and Poverty'
-  company_url = ''
+  # company_url = 'https://www.baylor.edu/hungerandpoverty/'
   location = 'Texas'
-  date_start = '2020-04-01'
-  date_end = '2020-08-01'
+  date_start = '2020-04'
+  date_end = '2020-08'
   description = 'Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard.'
 
-# [[experience]]
-#   title = "Teacher of Record"
-#   company = "Baylor University"
-#   company_url = "https://www.baylor.edu/"
-#   location = "Waco, TX"
-#   date_start = "2017-08"
-#   date_end = "2020-05"
-#   description = """Prepared lessons plans and instructed students
-#   Courses included:
-#   
-#   * Intro to Business Analytics
-#   * Quantitative Business Analysis I
-#   * Elementary Statistics
-#   """
-#   
+[[experience]]
+  title = "Teacher of Record"
+  company = "Baylor University"
+  # company_url = "https://www.baylor.edu/"
+  location = "Waco, TX"
+  date_start = "2017-08"
+  date_end = "2020-05"
+  description = """Prepared lessons plans and instructed students
+  Courses included:
+
+  * Intro to Business Analytics
+  * Quantitative Business Analysis I
+  * Elementary Statistics
+  """
+
 +++
