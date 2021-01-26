@@ -10,10 +10,10 @@ headless: true
 weight: 21
 
 # Section title
-# title: GitHub Activity
+title: GitHub Contributions
 
 # Section subtitle
-# subtitle: 
+subtitle: Check out how my programming activity
 
 # Section design
 design:
@@ -24,5 +24,4 @@ design:
   #   color: 'navy'
   #   text_color_light: true
 ---
-Check out my [GitHub](https://github.com/BriceonWiley) activity:
 <img src="https://ghchart.rshah.org/523A28/BriceonWiley" alt="Github Activity">
