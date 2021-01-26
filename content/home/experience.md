@@ -18,27 +18,27 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  title = "Postdoctoral Research Fellow"
+  company = "Rice University & MD Anderson Cancer Center"
+  company_url = "https://statistics.rice.edu/academics/graduate/interinstitutional-biostatistics-graduate"
+  location = "Houston, TX"
+  date_start = "2020-08"
   date_end = ""
-  description = """
+  description = """T32 grant recipient exploring a career in biostatistical cancer research."""
   Responsibilities include:
   
-  * Analysing
-  * Modelling
-  * Deploying
+  * Analyzing
+  * Statistical Modeling
+  * Programming
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Data Scientist"
+  company = "Baylor Collaborative on Hunger and Poverty"
+  company_url = "https://www.baylor.edu/hungerandpoverty/"
+  location = "Waco, TX"
+  date_start = "2020-04"
+  date_end = "2020-08"
+  description = """Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard."""
 
 +++
