@@ -1,0 +1,701 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10pt]{article}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactenum will be nice.
+\usepackage{paralist}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{6in}Wiley - \arabic{page}}
+% \lfoot{\hspace{\footpageshift}%
+%        \parbox{4in}{\, \hfill %
+%                     \arabic{page} of \protect\pageref*{LastPage} % +LP
+% %                    \arabic{page}                               % -LP
+%                     \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkgreen}{RGB}{0,120,36}
+\definecolor{darkblue}{RGB}{0,59,114}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+%
+% Usage: \makeheading{name}
+%
+% Place at top of document. It should be the first thing.
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+%
+% Follow this section IMMEDIATELY with the first line of the section
+% text. Do not put whitespace in between. That is, do this:
+%
+%       \section{My Information}
+%       Here is my information.
+%
+% and NOT this:
+%
+%       \section{My Information}
+%
+%       Here is my information.
+%
+% Otherwise the top of the section header will not line up with the top
+% of the section. Of course, using a single comment character (%) on
+% empty lines allows for the function of the first example with the
+% readability of the second example.
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{enumerate}[#1]}{\end{enumerate}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactenum}[#1]}{\end{compactenum}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+\definecolor{BUgreen}{RGB}{24,144,41} % not official BU color
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\annotate}[1]{{\color{darkgreen}#1}}
+\renewcommand{\annotate}[1]{\ } % comment out this line to annotate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newcommand{\pl}[1]{{\fontfamily{\sfdefault}\selectfont #1}}
+\newcommand{\pkg}[1]{\textbf{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Brice\"{o}n Wiley}
+
+
+%% CONTACT INFORMATION
+\section{Contact Information}
+%
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{3in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}lp{\rcollength}}
+\href{https://statistics.rice.edu}{Department of Statistics} & & \\
+\href{https://www.rice.edu}{Rice University}                            \\
+%1041 Duncan Hall, MS -- 138                                                & \textit{Cell \ \ \ \  } (713) 906-6331  \\
+Duncan Hall                                                      & \textit{E-Mail} &  \href{mailto:briceonwiley@rice.edu}{briceonwiley@rice.edu}\\
+Houston, Texas 77005, USA    & \textit{Website} & \href{https://www.briceonwiley.com}{https://www.briceonwiley.com}
+%\href{http://sites.google.com/site/davidkahle/}{http://sites.google.com/site/davidkahle}\\
+\end{tabular}
+
+
+
+%% SECURITY CLEARANCE
+%\section{Security Clearance}
+%
+%Department of Defense Top Secret SCI with polygraph (expired: 2002)
+
+
+
+%% CITIZENSHIP
+\section{Citizenship}
+%
+United States of America
+
+
+
+%% RESEARCH EXPERIENCE
+\section{Research Interests}
+%
+Integrated likelihood ratio methods, Confidence Interval methods, Misclassification, Double-sampling techniques, High dimensional data, Dimension reduction
+
+
+%% EDUCATION
+\section{Education}
+%
+\href{https://www.baylor.edu/}{\textbf{Baylor University}}, Waco, Texas, USA
+
+\begin{outerlist}
+
+\item[] Doctor of Philosophy (Ph.D.),
+        \href{https://www.baylor.edu/statistics/}{Statistics} \hfill \textbf{July 2016 -- December 2020}
+        \begin{innerlist}
+        \item Thesis titled  \\
+        \emph{Integrated-Likelihood-Ratio Confidence Intervals Obtained from Data Via a Double-Sampling Scenario}
+        \item Advisors: \href{https://www.baylor.edu/statistics/index.php?id=941846}{James Stamey} and \href{https://www.baylor.edu/statistics/index.php?id=941857}{Dean Young}
+        \item Area of Study: Parameter estimation, Confidence interval methods, Integrated-likelihood-ratio methods, Double-sampling techniques
+        \item GPA: 3.77
+        % \item Defense: August 10, 2020
+        \end{innerlist}
+
+\item[] Master of Science (M.S.),
+        \href{https://www.baylor.edu/statistics/}{Statistics} \hfill \textbf{July 2016 -- December 2017}
+        \begin{innerlist}
+        \item GPA: 3.74
+        \end{innerlist}
+
+\item[] Bachelor of Business Administration (B.B.A.),
+        \hfill \textbf{August 2012 -- May 2016}\\
+          \phantom{\hspace{0.1in}} \href{https://www.baylor.edu/business/fellows/}{Baylor Business Fellows}\\
+          \phantom{\hspace{0.2in}} \href{https://www.baylor.edu/business/finance/}{Finance}\\
+          \phantom{\hspace{0.2in}} \href{https://www.baylor.edu/math/}{Mathematics (Secondary Major)}\\
+          \phantom{\hspace{0.2in}} \href{https://www.baylor.edu/mlc/index.php?id=942538}{French (Secondary Major)}
+        \begin{innerlist}
+        \item GPA: 3.64
+        \end{innerlist}
+
+\end{outerlist}
+
+\blankline
+
+\href{http://welcome.unicaen.fr}{\textbf{Universit\'{e} de Caen Normandie}} \href{http://www.unicaen.fr/carre-international-253142.kjsp}{\emph{Carr\'{e} International}}, Caen, Normandy, France
+
+\begin{outerlist}
+
+\item[] Intensive French Language Program that culminated in DELF B2 French efficiency exam.
+        \begin{innerlist}
+        \item GPA: 3.83
+        \end{innerlist}
+
+\end{outerlist}
+
+
+
+%% PAPERS IN REVIEW OR ACCEPTED FOR PUBLICATION
+\section{{\color{black}Published Peer Reviewed Articles}}
+%
+
+\vskip -.07in
+
+Wiley, B., Elrod, C., Young, P., and Young, D. (2021) ``An integrated-likelihood-ratio confidence interval for a proportion based on underreported and infallible data.'' \emph{Statistica Neerlandica}. 75:1--9, \href{https://doi.org/10.1111/stan.12235}{Available here}.
+\annotate{\newline .}
+
+\vskip .1in
+
+% Kahle, D., P. Young, B. Greer, and D. Young  (2016). ``Confidence Intervals for the Ratio of Two Poisson Rates Under One-Way Differential Misclassification Using Double Sampling.'' \emph{Computational Statistics \& Data Analysis}, 95: 122--132.  \href{http://www.sciencedirect.com/science/article/pii/S0167947315002406}{Available here}. % DOI information: 10.1016/j.csda.2015.09.013.
+% \annotate{\newline .}
+%
+%
+% \vskip .1in
+%
+% Wu, W., J. Stamey, and D. Kahle  (2015). ``A Bayesian Approach to Account for Misclassification and Overdispersion in Observational Count Data.'' \emph{International Journal of Environmental Research and Public Health}, 12(9):10648--10661. \href{http://www.mdpi.com/1660-4601/12/9/10648/pdf}{Available here}. %doi:10.3390/ijerph120910648 % submitted 5/29/15
+% \annotate{\newline .}
+%
+% \vskip .1in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% PAPERS IN REVIEW
+\section{{\color{black}Articles under Peer Review}}
+%
+
+\vskip -.07in
+
+Harris, K., Harris, R., Valle, M., Carlson, J., Carlson, D., Zivnuska, S., Wiley, B. (2020) ``Technostress and the Entitled Employee: Impacts on Work and Family'' \emph{Information Technology and People}.
+\annotate{\newline .}
+
+
+
+
+
+
+
+
+
+
+
+%% PAPERS IN PREPARATION
+\section{{\color{black}Articles in Preparation}}
+%
+
+\vskip -.07in
+
+Wiley, B., Ma, Q., Young, P., Young, D. ``Coverage Correction for an Integrated-Likelihood-Ratio Confidence Interval for a Proportion from Misclassified Data using a Double-Sampling Scheme.'' \emph{TBD}.
+\annotate{\newline .}
+
+\vskip .1in
+
+Wiley, B., Stamey, J., Young, D. ``Integrated-Likelihood-Ratio Confidence Interval for the Log Odds-Ratio and Odds-Ratio Derived using Misclassified Data from a Double-Sampling Scenario.'' \emph{TBD}.
+\annotate{\newline .}
+
+% \vskip .1in
+%
+% Wiley, B., Smith, J. ``The Effect of Space on Education, Policy and Culture, Concerning Average SAT Scores in Texas.'' \emph{American Educational Research Journal}.
+% \annotate{\newline .}
+
+
+
+
+%% TEACHING EXPERIENCE
+\section{Teaching Experience}
+\textbf{Teaching Assistant} \hfill \textbf{August 2019 -- Present} \\
+\href{https://www.baylor.edu/business/mba/index.php?id=965996}{Online MBA Program}, \href{http://www.baylor.edu}{\textbf{Baylor University}}, Waco, Texas, USA \\
+    \phantom{\hspace{0.25in}} \emph{Business Foundations - Statistics} \hfill \textbf{Fall 2019, 20; Spring 2020, 21}
+
+\blankline
+
+\textbf{Teacher of Record} \hfill \textbf{August 2017 -- May 2020} \\
+\href{https://www.baylor.edu/statistics/}{Department of Statistical Sciences}, \href{http://www.baylor.edu}{\textbf{Baylor University}}, Waco, Texas, USA \\
+    \phantom{\hspace{0.25in}} \emph{Intro to Business Analytics} \hfill \textbf{Spring 2019, 20} \\
+    \phantom{\hspace{0.25in}} \emph{Quantitative Business Analysis I} \hfill \textbf{Fall 2018, 19} \\
+    \phantom{\hspace{0.25in}} \emph{Elementary Statistics} \hfill \textbf{Fall 2017, Spring 2018}
+
+\blankline
+
+\textbf{Algebra II Teacher} \hfill \textbf{July 2018 -- June 2019} \\
+\href{https://www.rapoportacademy.org}{\textbf{Rapoport Academy}}, Waco, Texas, USA
+
+\blankline
+
+\textbf{Adjunct Professor} \hfill \textbf{Fall 2017} \\
+\href{http://www.mclennan.edu/mathematics-department/}{Department of Mathematics}, \href{http://www.mclennan.edu}{\textbf{McLennan Community College}}, Waco, Texas, USA \\
+    \phantom{\hspace{0.25in}} \emph{Elementary Algebra} \\
+    \phantom{\hspace{0.25in}} \emph{Intermediate Algebra}
+
+\blankline
+
+% \textbf{PSAT/SAT Prep Coach} \hfill \textbf{May 2016 -- June 2018} \\
+% \href{https://www.morethanateacher.com}{More Than A Teacher}, Waco, Texas, USA
+%
+% \blankline
+%
+% \textbf{Substitute Teacher} \hfill \textbf{August 2015 -- June 2017} \\
+% \href{https://www.connally.org/o/high-school}{Connally High School}, \href{https://www.connally.org}{Connally Independent School District}, Waco, Texas, USA
+%
+% \blankline
+%
+% \textbf{AVID Tutor} \hfill \textbf{November 2012 -- June 2015} \\
+% \href{https://lvhs.lavegaisd.org}{La Vega High School}, \href{https://www.lavegaisd.org}{La Vega Independent School District}, Waco, Texas, USA
+
+
+
+
+
+
+%% PROFESSIONAL EXPERIENCE
+\section{Work Experience}
+\textbf{Postdoctoral Research Fellow} \hfill \textbf{August 2020 -- Present} \\
+\href{https://statistics.rice.edu}{Department of Statistics}, \href{https://www.rice.edu}{\textbf{Rice University}}, Houston, Texas, USA \\
+\href{https://www.mdanderson.org/research/departments-labs-institutes/departments-divisions/biostatistics.html}{Department of Biostatistics}, \href{https://www.mdanderson.org}{\textbf{MD Anderson Cancer Center}}, Houston, Texas, USA
+    \phantom{\hspace{0.25in}} Advisor: \href{https://faculty.mdanderson.org/profiles/christine_peterson.html}{Christine Peterson}
+
+
+\blankline
+
+\textbf{Data Scientist} \hfill \textbf{April 2020 -- August 2020} \\
+\href{https://www.baylor.edu/hungerandpoverty/}{Baylor Collaborative on Hunger and Poverty}, \href{http://www.baylor.edu}{\textbf{Baylor University}}, Waco, Texas, USA
+
+\blankline
+%
+% \textbf{Personal Tutoring} \hfill \textbf{September 2014 -- Present}
+%
+% \blankline
+%
+% \textbf{Summer Intern} \hfill \textbf{June 2015 -- July 2015} \\
+% \href{https://www.texasheritagebank.com}{Texas Heritage Bank}, Boerne, Texas, USA
+%
+% \blankline
+%
+% \textbf{UIL Extemporaneous Speech Coach} \hfill \textbf{December 2014 -- June 2015} \\
+% \href{https://lvhs.lavegaisd.org}{La Vega High School}, \href{https://www.lavegaisd.org}{La Vega Independent School District}, Waco, Texas, USA
+%
+% \blankline
+%
+% \textbf{Student Grader} \hfill \textbf{August 2013 -- December 2014} \\
+% \href{https://www.baylor.edu/math/}{Department of Mathematics}, \href{https://www.baylor.edu}{Baylor University}, Waco, Texas, USA
+%
+% \blankline
+%
+% \textbf{Office Assistant} \hfill \textbf{January 2013 -- May 2016} \\
+% \href{https://www.baylor.edu/spirituallife/}{Department of Spiritual Life}, \href{https://www.baylor.edu}{Baylor University}, Waco, Texas, USA
+%
+% \blankline
+%
+% \textbf{Chapel Student Leader} \hfill \textbf{January 2013 -- December 2013} \\
+% \href{https://www.baylor.edu/spirituallife/}{Department of Spiritual Life}, \href{https://www.baylor.edu}{Baylor University}, Waco, Texas, USA
+%
+% \blankline
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% AWARDS AND ACTIVITIES
+\section{Awards and Activities}
+%
+% \textbf{Professional}
+% \begin{innerlist}
+% \item Wolfram Research's \href{http://www.wolfram.com/training/special-event/mathematica-experts-live-one-liner-competition-2012/}{Mathematica Experts Live: One-Liner Competition 2012} Honorable Mention.
+% \annotate{\newline The submission, which displayed live-feed video streaming through numbered Twitter logos, was one of fifteen honorable mention entries, with one grand-prize superseding.  The entry was featured in Wolfram Research's live online event revealing the winners and is currently posted on Wolfram's website at \url{http://goo.gl/Bcm3I}.}
+% \end{innerlist}
+%
+% \blankline
+%
+\textbf{Graduate}
+\begin{innerlist}
+\item Baylor University's \href{https://www.baylor.edu/ifl/index.php?id=934994/}{Conyer's Graduate Scholars Program}: Member (Fall 2017 -- Spring 2018)
+\item Baylor University's \href{https://www.baylor.edu/atl/index.php?id=930665}{Foundations for Teaching Workshop}, May 2017
+\item Graduate School Fellowship, 2016. Awarded by graduate school for GRE scores and undergraduate academic record.
+\end{innerlist}
+
+\blankline
+
+\textbf{Undergraduate}
+\begin{innerlist}
+\item Baylor University's \href{https://baylor.campuslabs.com/engage/organization/national-society-of-collegiate-scholars/}{National Society of Collegiate Scholars}: President (Fall 2015 -- Spring 2016), Executive Vice President (Fall 2013 -- Spring 2015)
+\item Baylor University's \href{https://baylor.campuslabs.com/engage/organization/the-impact-movement/}{The Impact Movement}: President (Fall 2013 -- Spring 2016)
+\item Baylor University's \href{https://blogs.baylor.edu/rmi/gamma-iota-sigma/}{Gamma Iota Sigma}: Member (Fall 2014 -- Spring 2016)
+\item Baylor University's \href{https://www.baylor.edu/ifl/index.php?id=934992/}{Crane Scholar's Program}: Member (Fall 2013 -- Spring 2016)
+\item \href{https://www.insurancecouncil.org/}{Insurance Council of Texas} Property \& Casualty Mid-Year Symposium (July 2015, 2016)
+\item \href{https://houstonmeic.com/}{Houston Marine Insurance Seminar} (September 2014)
+\item \href{https://www.lwfellowshipchurch.org/}{Living Word Fellowship Church} Summer Missionary: Belize, Central America (2009, 2010), Ghana, Africa (2011 -- 2014)
+\end{innerlist}
+
+
+
+
+
+
+
+
+
+
+
+
+%
+% %% R PACKAGES
+% \section{Copyrights}
+% %
+% Baker, M., R. King, and D. Kahle (2015--2016). \pkg{TITAN2}: Threshold Indicator Taxa Analysis. \pl{R} package \href{https://CRAN.R-project.org/package=TITAN2}{distributed by CRAN}. License : \href{http://cran.r-project.org/web/licenses/GPL-2}{GPL-2}.  Maintained from version 2.1, CRAN genesis.
+% \annotate{\newline .}
+%
+% \vskip .1in
+%
+% Kahle, D., J. Stamey, and R. Sides (2015--2016). \pkg{bayesRates}: Two-Sample Tests and Sample Size Determination from a Bayesian Perspective. \pl{R} package \href{https://github.com/dkahle/bayesRates}{version controlled with GitHub}. License : \href{http://cran.r-project.org/web/licenses/GPL-2}{GPL-2}.  Maintained through all versions---0.0, and current version 1.0.
+% \annotate{\newline .}
+%
+
+
+
+
+
+
+%
+% %% FUNDED RESEARCH
+% \newcounter{grantCounter}
+% \setcounter{grantCounter}{1}
+%
+% \section{Funded research}
+% %
+% \hskip .1in Titles preceded with asterisks ($^{*}$) indicate that the project is currently under review.
+%
+% \vskip .1in
+%
+% \begin{enumerate}
+%
+% \item[] \hskip -.7in \arabic{grantCounter}. \ \\ \vskip -.35in \stepcounter{grantCounter}
+%
+% \hskip -.7in
+% \begin{tabular}{rl}
+% Title :   & $^{*}$Collaborative Research: Applied Algebraic Statistics through \pl{R} \\
+% PI(s) :   & \href{https://sites.google.com/site/davidkahle/}{David Kahle}, Ph.D. (\href{http://www.baylor.edu/statistics/}{Asst. Prof., Stat. Sci., Baylor}) \\
+% Source :  & \href{http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504813}{National Science Foundation: Division of Mathematical Sciences: } \\
+%           & \href{http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504813}{Computational and Data-Enabled Science and Engineering (CDS\&E, PD 12-8084)} \\
+% Amount :  & \$63,895 \\
+% Period :  & 8/01/2016 --  7/31/2019 \\
+% Note :    & Collaborative proposal with \\
+%           & \href{http://polytopes.net}{Ruriko Yoshida}, Ph.D. (\href{http://stat.as.uky.edu}{Assoc. Prof., Stat., Kentucky}), \$133,542
+% \end{tabular}
+% \annotate{\newline .}
+% % submitted 12/9/2015
+%
+%
+%
+% \item[] \hskip -.7in \arabic{grantCounter}. \ \\ \vskip -.35in \stepcounter{grantCounter}
+%
+% \hskip -.7in
+% \begin{tabular}{rl}
+% Title :   & $^{*}$Applied Algebraic Statistics through \pl{R} \\
+% PI(s) :   & \href{https://sites.google.com/site/davidkahle/}{David Kahle}, Ph.D. (\href{http://www.baylor.edu/statistics/}{Asst. Prof., Stat. Sci., Baylor})  \\
+% Source :  & \href{https://www.nsa.gov/research/math_research/}{National Security Agency Mathematical Sciences Program} \\
+%           & Young Investigator Grant \\
+% Amount :  & \$36,081 \\
+% Period :  & 6/01/2017 --  5/31/2019 \\
+% \end{tabular}
+% \annotate{\newline .}
+% % original submission 10 Oct 2015, final submission/OSP approved 22 Oct 2015
+% % status at https://sam.msp.org/status.php?p_id=21713&cr=BA9989E290
+% % see emails from NSASystems@ams.org or Lisa_McKethan@baylor.edu on 22 Oct 2015
+%
+%
+%
+% \end{enumerate}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+% %% INVITED LECTURES
+% \section{Invited Presentations}
+% %
+% \textbf{Kahle, D.} ``Algebraic Regression [\emph{Tentative}].'' \emph{2016 Society for Industrial and Applied Mathematics (SIAM) Annual Meeting}, The Westin Boston Waterfront, Boston, Massachusetts, USA, July 11--15, 2016.
+% \annotate{\newline .}
+%
+% \vskip .1in
+%
+% \textbf{Kahle, D.} ``Reflections on Big Data: What it is, why you should care, and why you shouldn't." \emph{Baylor Undergraduate Research in Science and Technology (BURST)}, Baylor University, Waco, Texas, USA, November 19, 2015.
+% \annotate{\newline .}
+%
+
+
+
+
+
+
+%
+% %% CONFERENCE PRESENTATIONS
+% \section{Conference Presentations}
+% %
+% \textbf{Bold} denotes presenter.
+%
+% \vskip .1in
+%
+% \textbf{Garcia-Puente, L.} and D. Kahle. ``\pkg{AlgStat}: An \pl{R} package for algebraic statistics." \emph{Algebraic Statistics 2015}, Universit\`{a} degli Studi di Genova, Genoa, Italy, June 8--11, 2015. (Tutorial) % http://www.dima.unige.it/~rogantin/AS2015/
+% \annotate{\newline .}
+%
+% \vskip .1in
+%
+% \textbf{Young, P.}, D. Kahle, and D. Young. ``Confidence Intervals for the Ratio of Two Poisson Rates Under Differential Misclassification Using Double Sampling." \emph{Southern Regional Council on Statistics Summer Research Conference}, Courtyard Marriott, Carolina Beach, North Carolina, USA, June 7--10, 2015. (Poster) %\href{https://dl.dropboxusercontent.com/u/24648660/SRCOS%202014%20Poster.pdf}{Poster available here}.
+% \annotate{\newline .}
+%
+
+
+
+
+
+
+
+
+
+%% TECHNICAL SKILLS
+\section{Technical Skills}
+%
+Experience with stochastic simulation, data visualization, and \pl{R} package development.
+
+\blankline
+
+Programming: \pl{R}, \pl{(R) Markdown}, \pl{R Shiny}, \pl{Julia}, \pl{SAS}, \pl{JAGS}, \pl{STAN}, \pl{Wolfram} (Mathematica), \pl{Shell}, \pl{JavaScript}
+
+\blankline
+
+Version Control: \pl{Git}, \href{https://github.com/BriceonWiley}{GitHub} user @BriceonWiley
+
+\blankline
+
+Applications: Rstudio, VS Code, Emacs, \TeX{} / \LaTeX{} / B\textsc{ib}\TeX{}, Microsoft Office
+
+\blankline
+
+Operating Systems: Mac OS, Microsoft Windows
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
