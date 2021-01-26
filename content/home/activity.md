@@ -13,7 +13,7 @@ weight: 21
 title: GitHub Contributions
 
 # Section subtitle
-subtitle: Check out how my programming activity
+subtitle: Check out my programming activity
 
 # Section design
 design:
