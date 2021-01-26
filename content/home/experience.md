@@ -32,8 +32,8 @@ date_format = "Jan 2006"
 #   * Programming
 #   """
 #
-experience:
-- title = 'Data Scientist'
+[[experience]]
+  title = 'Data Scientist'
   company = 'Baylor Collaborative on Hunger and Poverty'
   company_url = ''
   location = 'Texas'
