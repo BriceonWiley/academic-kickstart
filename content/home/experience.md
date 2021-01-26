@@ -35,7 +35,7 @@ date_format = "Jan 2006"
 experience:
 - title = 'Data Scientist'
   company = 'Baylor Collaborative on Hunger and Poverty'
-  company_url = 'https://www.baylor.edu/hungerandpoverty/'
+  company_url = ''
   location = 'Texas'
   date_start = '2020-04-01'
   date_end = '2020-08-01'
