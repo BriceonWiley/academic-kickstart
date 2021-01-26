@@ -2,10 +2,10 @@
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = false  # This file represents a page section.
-active = false  # Activate this widget? true/false
+active = true  # Activate this widget? true/false
 weight = 40  # Order that this section will appear.
 
-title = "Experience"
+title = "Selected Experience"
 subtitle = ""
 
 # Date format for experience
@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   location = "Houston, TX"
   date_start = "2020-08"
   date_end = ""
-  description = """T32 grant recipient exploring a career in biostatistical cancer research."""
+  description = """T32 grant recipient exploring a career in biostatistical cancer research.
   Responsibilities include:
   
   * Analyzing
@@ -40,5 +40,20 @@ date_format = "Jan 2006"
   date_start = "2020-04"
   date_end = "2020-08"
   description = """Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard."""
+  
+[[experience]]
+  title = "Teacher of Record"
+  company = "Baylor University"
+  company_url = "https://www.baylor.edu/"
+  location = "Waco, TX"
+  date_start = "2017-08"
+  date_end = "2020-05"
+  description = """Prepared lessons plans and instructed students
+  Courses included:
+  
+  * Intro to Business Analytics
+  * Quantitative Business Analysis I
+  * Elementary Statistics
+  """
 
 +++
