@@ -19,7 +19,7 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "Postdoctoral Research Fellow"
-  company = "Rice University \& MD Anderson Cancer Center"
+  company = "Rice University & MD Anderson Cancer Center"
   # company_url = "https://statistics.rice.edu/academics/graduate/interinstitutional-biostatistics-graduate"
   location = "Houston, TX"
   date_start = "2020-08-01"
@@ -36,7 +36,7 @@ date_format = "Jan 2006"
   title = 'Data Scientist'
   company = 'Baylor Collaborative on Hunger and Poverty'
   # company_url = 'https://www.baylor.edu/hungerandpoverty/'
-  location = 'Texas'
+  location = 'Waco, TX'
   date_start = '2020-04-01'
   date_end = '2020-08-01'
   description = 'Analyzed data for Emergency Meals to You program and constructed an R Shiny dashboard.'
