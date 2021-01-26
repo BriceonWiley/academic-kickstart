@@ -8,5 +8,5 @@ weight = 20  # Order that this section will appear in.
 title = "Programming Activity"
 
 Check out my GitHub activity:
-<img src="https://ghchart.rshah.org/BriceonWiley" alt="Name Your GitHub chart">
+#<img src="https://ghchart.rshah.org/BriceonWiley" alt="Name Your GitHub chart">
 +++
