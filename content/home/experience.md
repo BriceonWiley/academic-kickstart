@@ -37,8 +37,8 @@ date_format = "Jan 2006"
   company = "Baylor Collaborative on Hunger and Poverty"
   company_url = "https://www.baylor.edu/hungerandpoverty/"
   location = "Waco, TX"
-  date_start = "2020-04"
-  date_end = "2020-08"
+  date_start = "Apr 2020"
+  date_end = "Aug 2020"
   description = "Analyzed Emergency Meals to You program data sets and constructed an R Shiny dashboard."
 
 # [[experience]]
