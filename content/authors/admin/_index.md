@@ -32,6 +32,13 @@ education:
     - course: BBA in Business, Finance, French, and Mathematics
       institution: Baylor University
       year: 2016
+languages:
+  - computer:
+    - R
+    - Julia
+  - spoke:
+    - English
+    - Japanese
 email: ""
 superuser: true
 authors:
