@@ -29,7 +29,7 @@ subtitle = ""
 [[feature]]
   icon = "japan"
   icon_pack = "custom"
-  name = "Photography"
+  name = "Japanese"
   description = "intermediate"
 
 # [[feature]]
@@ -47,7 +47,7 @@ subtitle = ""
 # [[feature]]
 #   icon = "globe-asia"
 #   icon_pack = "fas"
-#   name = "Photography"
+#   name = "Japanese"
 #   description = "intermediate"
 
 # Uncomment to use emoji icons.
