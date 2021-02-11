@@ -24,7 +24,9 @@ date_format = "Jan 2006"
   location = "Houston, TX"
   date_start = "2020-08-01"
   date_end = ""
-  description = """T32 grant recipient exploring a career in biostatistical cancer research.\
+  description = """T32 grant recipient exploring a career in biostatistical cancer research.
+  
+  
   Responsibilities include:
   * Analyzing data
   * Statistical modeling
@@ -47,7 +49,9 @@ date_format = "Jan 2006"
   location = "Waco, TX"
   date_start = "2017-08-01"
   date_end = "2020-05-01"
-  description = """Prepared lessons plans and instructed students.\
+  description = """Prepared lessons plans and instructed students.
+  
+  
   Courses included:
   * Intro to Business Analytics
   * Quantitative Business Analysis I
