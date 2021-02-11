@@ -15,7 +15,7 @@ social:
   - link: https://orcid.org/0000-0003-2297-2006
     icon_pack: ai
     icon: orcid
-  - link: https://scholar.google.com/citations?hl=en&authuser=1
+  - link: https://scholar.google.com/citations?user=vyygfj4AAAAJ&hl=en&oi=ao
     icon_pack: ai
     icon: google-scholar
   - link: https://www.linkedin.com/in/briceon-wiley-62075ab5/
