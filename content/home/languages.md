@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
-title = "Spoken Languages"
+title = "Languages"
 subtitle = ""
 
 # Showcase personal skills or business features.
@@ -15,22 +15,34 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 
 [[feature]]
-  icon = "globe-americas"
-  icon_pack = "fas"
+  icon = "united-states"
+  icon_pack = "custom"
   name = "English"
   description = "native"
   
 [[feature]]
-  icon = "globe-europe"
-  icon_pack = "fas"
+  icon = "france"
+  icon_pack = "custom"
   name = "French"
   description = "proficient"  
   
 [[feature]]
-  icon = "japanese-kanji"
+  icon = "japan"
   icon_pack = "custom"
   name = "Photography"
   description = "intermediate"
+
+# [[feature]]
+#   icon = "globe-americas"
+#   icon_pack = "fas"
+#   name = "English"
+#   description = "native"
+#   
+# [[feature]]
+#   icon = "globe-europe"
+#   icon_pack = "fas"
+#   name = "French"
+#   description = "proficient"  
 #   
 # [[feature]]
 #   icon = "globe-asia"
