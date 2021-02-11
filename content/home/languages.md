@@ -31,6 +31,12 @@ subtitle = ""
   icon_pack = "fas"
   name = "Photography"
   description = "intermediate"
+#   
+# [[feature]]
+#   icon = "japanese-kanji"
+#   icon_pack = "fas"
+#   name = "Photography"
+#   description = "intermediate"
 
 # Uncomment to use emoji icons.
 # [[feature]]
