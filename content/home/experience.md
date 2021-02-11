@@ -29,7 +29,7 @@ date_format = "Jan 2006"
 
   * Analyzing data
   * Statistical modeling
-  * Statisitcal programming
+  * Statistical programming
   """
 
 [[experience]]
@@ -48,7 +48,7 @@ date_format = "Jan 2006"
   location = "Waco, TX"
   date_start = "2017-08-01"
   date_end = "2020-05-01"
-  description = """Prepared lessons plans and instructed students
+  description = """Prepared lessons plans and instructed students.
   Courses included:
 
   * Intro to Business Analytics
