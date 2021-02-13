@@ -24,7 +24,7 @@ subtitle = ""
   icon = "france"
   icon_pack = "custom"
   name = "French"
-  description = "proficient"  
+  description = "advanced intermediate"  
   
 [[feature]]
   icon = "japan"
