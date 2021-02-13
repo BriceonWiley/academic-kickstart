@@ -42,7 +42,7 @@ subtitle = ""
 #   icon = "globe-europe"
 #   icon_pack = "fas"
 #   name = "French"
-#   description = "proficient"  
+#   description = "advanced intermediate"  
 #   
 # [[feature]]
 #   icon = "globe-asia"
